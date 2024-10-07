@@ -1,29 +1,36 @@
 // import { N } from "ethers";
 import { useState } from "react";
-
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAccount } from 'wagmi';
 function NavBar () {
     const [nav, setNav] = useState(false);
     const showNav = ()  => {
        setNav(!nav)
     }
+    const navigate = useNavigate();
+    const { address, isConnecting} = useAccount();
+    
+    useEffect(() => {
+        if (address && !isConnecting) {
+          navigate('/reels');
+        }
+      }, [address, isConnecting, history]);
     return (
         <>
-            <div className="fixed w-full z-[1000] p-[5px] py-2 bg-[#1E1E1E] shadow-md">
+            <div className="fixed w-full z-[1000] p-[5px] py-2 shadow-md">
                 <nav className="flex justify-between items-center  my-[10px] mx-10 h-10 pb-13 sm:mx-5 lg:mx-10">
                     <div className="flex justify-between items-center w-[100%] sm:w-[100%] md:w-[100%] lg:w-[20%]">
                         <div className="flex justify-start self-center">
-                            <img className="w-[18%]" src="/Images/logo.png" alt="" />
-                            <a className="text-[25px] text-white font-medium" href="/dashboard">BEATBIT</a>
+                            <a className="text-[27px] text-[#CC0808] font-bold" href="/">BITREEL</a>
                         </div>
                         <div className="w-0 sm:w-7 md:w-8 lg:w-0" onClick={showNav}>
                            {!nav ? <img className="cursor-pointer" src="/Images/menu.png" alt=""/> : <img className="cursor-pointer" src="/Images/close.png" alt=""/>}
                         </div>
                     </div>
                     <ul className="flex justify-center items-center text-[16px] space-x-5 text-white sm:hidden md:hidden lg:flex">
-                        <li className="text-center text-md font-md"><a className='pr-3' href="/home">How it works</a></li>
-                        <li className="text-center text-md"><a className='pr-3' href="/home">For Musicians</a></li>
-                        <li className="text-center text-md"><a className='pr-3' href="/home">For Audience</a></li>
-                        <w3m-button/>
+                        {/* <button className="bg-[#CC0808] hover:bg-[#CC0740] px-[7px] py-[10px] text-[15px] rounded-xl" type="button">Connect wallet</button> */}
+                        <button onClick={navigate}><w3m-button/></button>
                     </ul>
                     <div className={!nav ? 'fixed left-[-100%]' : 'fixed left-0 top-0 w-[40%] text-black mt-[76px] h-full bg-[#E4E4E4] shadow-md ease-in-out duration-500 sm:w-[80%] md:w-[40%] lg:hidden'}>
                         <ul className="uppercase w-full p-12 space-y-6">

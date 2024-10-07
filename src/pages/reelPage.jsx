@@ -1,15 +1,13 @@
 import ReelsNavBar from "./reelsNavbar"
 import Sidemenu from "../components/sidemenu"
-function Pools () {
+function ReelPage () {
+
     return (
         <>
             <ReelsNavBar/>
             <Sidemenu/>
-            <div className="pt-[90px]">
-                <div className="help flex justify-center items-center pt-[170px] pb-[140px]">
-                    <img className="w-[10%]" src="/Images/YouTube.png" alt="" />
-                    {/* <img className="w-[55%]" src="/Images/I will design amazing documentary and History youtube video thumbnail (7) 1.png" alt="" /> */}
-                </div>
+            <div className="flex justify-center items-center pt-[140px]">
+                <img className="w-[55%]" src="/Images/I will design amazing documentary and History youtube video thumbnail (7) 1.png" alt="" />
             </div>
             <section className="pl-[320px] grid grid-cols-4 gap-2 text-white">
                 <div className="mt-[20px]">
@@ -26,17 +24,14 @@ function Pools () {
                     <p>Telegram channel</p>
                 </div>
             </section>
-            <div className="pl-[320px]">
-                <p className="text-white w-[45%]">Description: Help is a movie that talk about the chronicles of life of a young girl shelp,who was kidnap alongside with people on the train</p>
-                <div>
-                    <button className="bg-transparent border mr-[20px] mt-[30px] text-white px-[30px] py-[7px]" type="button">Invest Token</button>
-                    <button className="bg-[#CC0808] text-white px-[20px] py-[5px]" type="button">Trade</button>
-                </div>
-                <div className="mt-[30px]">
-                    <button className="bg-[#08DA4E] mr-[5px] text-white px-[32px] py-[7px]" type="button">Long</button>
-                    <button className="bg-[#7D7777] text-white px-[32px] py-[7px]" type="button">Short</button>
-                </div>
-            </div>
+            <section className="flex justify-center items-center space-x-[20px] mt-[30px] text-white pl-[30px]">
+                <p className="bg-[#CC0808] px-[30px] py-[5px] rounded-md" type="button">All</p>
+                <button className="bg-white px-[30px] py-[5px] rounded-md text-black" type="button">Action</button>
+                <button className="bg-white px-[30px] py-[5px] rounded-md text-black" type="button">Trailers</button>
+                <button className="bg-white px-[30px] py-[5px] rounded-md text-black" type="button">Comedy</button>
+                <button className="bg-white px-[30px] py-[5px] rounded-md text-black" type="button">Drama</button>
+                <button className="bg-white px-[30px] py-[5px] rounded-md text-black" type="button">Fashion</button>
+            </section>
             <div className='mb-[40px] grid grid-cols-3 gap-4 mt-[30px] pl-[300px]'>
                 <div>
                     <img className='w-[50%]' src="/Images/Dwayne Johnson 1.png" alt="" />
@@ -92,4 +87,4 @@ function Pools () {
         </>
     )
 }
-export default Pools
+export default ReelPage
