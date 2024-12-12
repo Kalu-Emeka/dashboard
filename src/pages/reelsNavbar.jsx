@@ -3,20 +3,18 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAccount } from 'wagmi';
 function ReelsNavBar () {
+    const navigate = useNavigate();
     const [nav, setNav] = useState(false);
+    const { address, isDisconnected } = useAccount();
+
     const showNav = ()  => {
        setNav(!nav)
     }
-    const navigate = useNavigate();
-    const { address, isConnecting, isDisconnected } = useAccount();
-    
     useEffect(() => {
-        if (address && isDisconnected) {
+        if (isDisconnected) {
             navigate('/home');
         }
-      }, [address, isConnecting, isDisconnected, history]);
-    // const location = useLocation();
-    // const { account } = location.state;
+      }, [isDisconnected, navigate]);
     return (
         <>
             <div className="fixed w-full z-[1000] p-[5px] py-2 bg-[#1E1E1E] shadow-md">
@@ -33,16 +31,14 @@ function ReelsNavBar () {
                         <button onClick={navigate}><w3m-button /></button>
                         {/* <a href="/connect" rel="noopener noreferrer"><img className="w-[25%] ml-[30px]" src="/Images/address.png" alt="" srcSet="" /></a> */}
                     </ul>
-                    <div className={!nav ? 'fixed left-[-100%]' : 'fixed left-0 top-0 w-[40%] text-black mt-[76px] h-full bg-[#E4E4E4] shadow-md ease-in-out duration-500 sm:w-[80%] md:w-[40%] lg:hidden'}>
-                        <ul className="uppercase w-full p-12 space-y-6">
-                            <li className="text-md"><a className='hover:text-[#ff014f] font-medium' onClick={showNav} href="/"></a></li>
-                            <li className="text-md"><a className='hover:text-[#ff014f] font-medium' onClick={showNav} href=""></a></li>
-                            <li className="text-md"><a className='hover:text-[#ff014f] font-medium' onClick={showNav} href=""></a></li>
-                            <li className="text-md"><a className='hover:text-[#ff014f] font-medium' onClick={showNav} href=""></a></li>
-                            <li className=""><a className='hover:text-[#ff014f] font-medium' onClick={showNav}  href="#contact"></a></li>
+                    <div className={!nav ? 'fixed left-[-100%]' : 'fixed left-0 top-0 w-[40%] text-white mt-[76px] h-full bg-[#1E1E1E] shadow-md ease-in-out duration-500 sm:pt-[30px] sm:w-[80%] md:w-[40%] lg:hidden'}>
+                        <ul className="space-y-[30px] text-[19px]">
+                            <li className="hover:bg-gray-800 hover:py-[10px] py-[10px] pl-[20px] hover:w-[90%] hover:pl-[20px]" onClick={showNav}><a href="/reels">Watch</a></li>
+                            <li className="hover:bg-gray-800 hover:py-[10px] py-[10px] pl-[20px] hover:w-[90%] hover:pl-[20px]" onClick={showNav}><a href="/pool">Pools</a></li>
+                            <li className="hover:bg-gray-800 hover:py-[10px] py-[10px] pl-[20px] hover:w-[90%] hover:pl-[20px]" onClick={showNav}   ><a href="/earn">Earn</a></li>
                         </ul>
-                        <div className="flex p-[10px] ml-12 w-[40%] mr-4 rounded-md text-[13px] hover:bg-[#ff014f] hover:text-white bg-[#878e99] sm:w-[50%]">
-                            <a href="https://www.resume.com/dashboard/resume/a1dbbd70-42a3-43fb-b7ba-18b37407ed87" target="_blank" rel="noopener noreferrer"><button type="button">Download Resume</button></a>
+                        <div className="flex p-[10px] ml-0 w-[40%] mr-4 rounded-md text-[13px] sm:w-[90%]" onClick={showNav}>
+                            <button onClick={navigate}><w3m-button /></button>
                         </div>
                     </div>
                    
