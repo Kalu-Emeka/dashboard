@@ -3,7 +3,7 @@
 @tailwind utilities;
 body {
   font-family: "Inter";
-  background-color: #1E1E1E;
+  background-color: white;
 }
 .header  {
   background-image: url("/Images/banner.png");

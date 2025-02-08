@@ -1,86 +1,235 @@
-import Navbar from '../components/nav.jsx';
 
+import Sidemenu from "../components/sidemenu"
 function LandingPage () {
     return (
         <>
-            <Navbar/>
-            <div className="header flex justify-center pt-[170px] pb-[150px] items-center text-white bg-[#1E1E1E] sm:pr-[30px] sm:pb-[50px] lg:pb-[150px] sm:pl-[30px] lg:pr-[100px] lg:pl-[80px]" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                <div className="text-center sm:w-[95%] sm:text-center md:text-center lg:text-center">
-                    <h2 className="mb-4 text-[35px] text-white z-1000 font-bold sm:text-[17px] md:text-[35px]">Unlock the Value of Cinema with BitReel</h2>
-                    <p className='text-white font-bold text-[20px] mb-[80px] sm:text-[16px] tracking-widest sm:w-[100%]  lg:text-[20px]'>Engage, Watch, Profit: The Blockchain Box Office</p>
-                    <p className='text-[18px]'>Free streaming of movies, Engage, earn and trade </p>
-                </div>
-            </div>
-            <section className='text-white mt-[20px] ml-[30px]'>
-                <h2 className='text-[18px] font-bold mb-[20px]'>TRENDING NOW</h2>
-                <div className='flex justify-left items-center border w-[8%] px-[10px] py-[4px] mb-[50px] sm:w-[35%] md:w-[18%] lg:w-[8%]'>
-                    <p>Action</p>
-                    <img className='ml-[10px] w-[30%]' src="/Images/logo.png" alt="" />
-                </div>
-                <div className='mb-[40px] grid grid-cols-3 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-                    <div>
-                        <img className='w-[50%]' src="/Images/Dwayne Johnson 1.png" alt="" />
-                        <div className='flex justify-left mt-[10px]'>
-                            <p className='mr-[40px]'>2.2340biz</p>
-                            <p className='text-[#08DA4E]'>+4.50%</p>
+            <Sidemenu/>
+            <section className="relative w-full">
+                <div>
+                    <div className="absolute left-[19%] top-[30px] w-[80%]">
+                        <div className="flex justify-between">
+                            <h2 className="mb-[5px] flex text-[15px]">Dashboard</h2>
+                            <div>
+                                <h2 className="border px-[10px] rounded-md">:</h2>
+                            </div>
                         </div>
-                        <p className='mt-[10px]'>3.6M Views </p>
+                        <hr className="w-full" />
                     </div>
-                    <div>
-                        <img className='w-[50%]' src="/Images/The Lord of the Rings_ The Fellowship of the Ring 1.png" alt="" />
-                        <div className='flex justify-left mt-[10px]'>
-                            <p className='mr-[40px]'>4.2340biz</p>
-                            <p className='text-[#08DA4E]'>+9.50%</p>
+                    <div className="absolute flex justify-between items-center left-[20%] top-[70px] w-[77%]">
+                        <div>
+                            <h3>Hey Kelvin</h3>
+                            <p className="text-[13px] text-gray-500">Here is all your Mask analytics overview</p>
                         </div>
-                        <p className='mt-[10px]'>3.9M Views </p>
-                    </div>
-                    <div>
-                        <img className='w-[59%]' src="/Images/8fcaa1c2-4e8f-4b7b-8bc9-4e942010bd9b 1.png" alt="" />
-                        <div className='flex justify-left mt-[10px]'>
-                            <p className='mr-[40px]'>3.2340biz</p>
-                            <p className='text-[#08DA4E]'>+7.50%</p>
+                        <div className="flex">
+                            <button className="border text-gray-500 py-[7px] px-[25px] rounded-md text-[14px] mr-[10px] w-[60%]">Filter</button>
+                            <button className="border text-white bg-blue-900 py-[7px] px-[25px] rounded-md text-[14px] w-[60%]">Export</button>
                         </div>
-                        <p className='mt-[10px]'>3.6M Views </p>
                     </div>
-                </div>
-                <div className='mb-[40px] grid grid-cols-3 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-                    <div>
-                        <img className='w-[50%]' src="/Images/Bel-Air Season 2 adds Tatyana Ali 1 (1).png" alt="" />
-                        <div className='flex justify-left mt-[10px]'>
-                            <p className='mr-[40px]'>1.2240biz</p>
-                            <p className='text-[#08DA4E]'>+2.50%</p>
+                    <div className="absolute left-[20%] top-[130px] grid grid-cols-4 gap-4 w-[78%]">
+                        <div className="border-2 border border-dotted py-[10px] px-[8px] border-blue-400">
+                            <div className="flex">
+                                <h3 className="text-[12px] mr-[20px]">ACTIVE VISITORS</h3>
+                                <p className="text-green-500 text-[12px]">6.7% Increase</p>
+                            </div>
+                            <h2 className="font-bold">157,367</h2>
+                            <img className="w-[90%] mt-[10px]" src="/Images/b1.png" alt="" />
                         </div>
-                        <p className='mt-[10px]'>2.6M Views </p>
-                    </div>
-                    <div>
-                        <img className='w-[50%]' src="/Images/2df54cad-9155-43d5-85c2-bb60e6a4e035 1.png" alt="" />
-                        <div className='flex justify-left mt-[10px]'>
-                            <p className='mr-[40px]'>2.2340biz</p>
-                            <p className='text-[#08DA4E]'>+3.50%</p>
+                        <div className="border-2 border border-dotted py-[10px] px-[8px] border-blue-400">
+                            <div className="flex">
+                                <h3 className="text-[12px] mr-[20px]">ACTIVE VISITORS</h3>
+                                <p className="text-red-500 text-[12px]">13.5% Decrease</p>
+                            </div>
+                            <h2 className="font-bold">9,741</h2>
+                            <img className="w-[90%] mt-[10px]" src="/Images/b3.png" alt="" />
                         </div>
-                        <p className='mt-[10px]'>2.3M Views </p>
-                    </div>
-                    <div>
-                        <img className='w-[50%]' src="/Images/9874ad16-4086-467c-be5a-f78b1a49f738 1.png" alt="" />
-                        <div className='flex justify-left mt-[10px]'>
-                            <p className='mr-[40px]'>1.1340biz</p>
-                            <p className='text-[#08DA4E]'>+2.50%</p>
+                        <div className="border-2 border border-dotted py-[10px] px-[8px] border-blue-400">
+                            <div className="flex">
+                                <h3 className="text-[12px] mr-[20px]">ACTIVE VISITORS</h3>
+                                <p className="text-green-500 text-[12px]">6.7% Increase</p>
+                            </div>
+                            <h2 className="font-bold">9.73%</h2>
+                            <img className="w-[90%] mt-[10px]" src="/Images/b4.png" alt="" />
                         </div>
-                        <p className='mt-[10px]'>2.1M Views </p>
+                        <div className="border-2 border border-dotted py-[10px] px-[8px] border-blue-400">
+                            <div className="flex">
+                                <h3 className="text-[12px] mr-[20px]">ACTIVE VISITORS</h3>
+                                <p className="text-green-500 text-[12px]">3.5% Increase</p>
+                            </div>
+                            <h2 className="font-bold">81.94%</h2>
+                            <img className="w-[90%] mt-[10px]" src="/Images/b2.png" alt="" />
+                        </div>
                     </div>
-                </div>
-            </section>
-            <section className='text-white pl-[30px] pb-[40px]'>
-                <h2 className='text-[25px] font-bold mt-[30px] mb-[30px] sm:text-[20px] lg:text-[25px] sm:w-[70%] lg:w-full'>Video AMM Trading Platform</h2>
-                <div className='grid grid-cols-3 gap-4 sm:grid-cols-1 lg:grid-cols-3'>
-                    <div className='bg-[#580404] w-[80%] sm:w-[90%] lg:w-[80%]'>
-                        <p className='px-[20px] py-[20px] w-[86%]'>Whether you download video movie and watch online, or watch movie online you are still going to be reward as a users for Engaging </p>
+                    <div className="absolute left-[20%] top-[330px] w-[79%]">
+                        <div className="flex justify-between">
+                            <div className="border-2 border border-dotted py-[10px] border-blue-400 w-[70%] mr-[20px]">
+                                <div className="flex justify-between">
+                                    <h2 className="mb-[5px] flex text-[15px] pl-[10px]">User Overview</h2>
+                                    <button className="border px-[10px] py-[5px] text-[13px] rounded-md mb-[5px] mr-[10px]">This Month</button>
+                                </div>
+                                <hr className="w-full" />
+                                <img className="w-[80%] mt-[10px]" src="/Images/b2.png" alt="" />
+                            </div>
+                            <div  className="border-2 border border-dotted py-[10px] border-blue-400 w-[30%]">
+                                <div className="flex justify-between mb-[5px] px-[5px]">
+                                    <h2 className="mb-[5px] flex text-[15px]">Most Visited Page</h2>
+                                    <img className="w-[10%] object-contain border bg-gray-200 px-[7px] py-[7px] rounded-[50px]" src="/Images/close.png" alt="" />
+                                </div>
+                                <hr className="w-full" />
+                                <div className="">
+                                    <div className="grid grid-cols-3 mt-[10px] gap-4 bg-gray-200 text-[12px] pl-[20px]">
+                                        <h2>PAGE NAME</h2>
+                                        <h2>TOTAL HERE</h2>
+                                        <h2>83.6 RATE</h2>
+                                    </div>
+                                    <div className="grid grid-cols-3 gap-4 pl-[20px] text-[12px] mt-[20px] font-bold">
+                                        <h2>Package</h2>
+                                        <h2>547,914</h2>
+                                        <h2 className="text-green-400">81.94%</h2>
+                                    </div>
+                                    <div className="grid grid-cols-3 gap-4 pl-[20px] text-[12px] mt-[20px] font-bold">
+                                        <h2>Package</h2>
+                                        <h2>547,914</h2>
+                                        <h2 className="text-green-400">81.94%</h2>
+                                    </div>
+                                    <div className="grid grid-cols-3 gap-4 pl-[20px] text-[12px] mt-[20px] font-bold">
+                                        <h2>Package</h2>
+                                        <h2>547,914</h2>
+                                        <h2 className="text-green-400">81.94%</h2>
+                                    </div>
+                                    <div className="grid grid-cols-3 gap-4 pl-[20px] text-[12px] mt-[20px] font-bold">
+                                        <h2>Flight Booking</h2>
+                                        <h2>547,914</h2>
+                                        <h2 className="text-green-400">81.94%</h2>
+                                    </div>
+                                    <div className="grid grid-cols-3 gap-4 pl-[20px] text-[12px] mt-[20px] font-bold">
+                                        <h2>Hotel Listing</h2>
+                                        <h2>547,914</h2>
+                                        <h2 className="text-green-400">81.94%</h2>
+                                    </div>
+                                    <div className="grid grid-cols-3 gap-4 pl-[20px] text-[12px] mt-[20px] font-bold">
+                                        <h2>Package Rate</h2>
+                                        <h2>547,914</h2>
+                                        <h2 className="text-green-400">81.94%</h2>
+                                    </div>
+                                    <div className="grid grid-cols-3 gap-4 pl-[20px] text-[12px] mt-[20px] font-bold">
+                                        <h2>Package</h2>
+                                        <h2>547,914</h2>
+                                        <h2 className="text-green-400">81.94%</h2>
+                                    </div>
+                                </div>                          
+                            </div>
+                        </div>
                     </div>
-                    <div className='bg-[#580404] w-[80%] sm:w-[90%] lg:w-[80%]'>
-                        <p className='px-[20px] py-[20px] w-[85%]'>FIlmmakers, creator, upload your movies for streaming, trading, and earning. Allowing users to trade and stake tokens on your content for earning </p>
-                    </div>
-                    <div className='bg-[#580404] w-[80%] sm:w-[90%] lg:w-[80%]'>
-                        <p className='px-[20px] py-[20px] w-[80%]'>BitReel is not just a platform for streaming but a platform, it is a blockchain box office video platform</p>
+                    <div className="absolute left-[20%] top-[700px] w-[80%]">
+                        <div className="flex justify-center">
+                            <div className="border-2 border border-dotted py-[10px] border-blue-400 w-[50%] mr-[20px]">
+                                <div className="flex justify-between">
+                                    <h2 className="mb-[5px] flex text-[15px] pl-[10px]">Browser Overview</h2>
+                                    <button className="border px-[10px] py-[5px] text-[13px] rounded-md mb-[5px] mr-[10px]">This Month</button>
+                                </div>
+                                <hr className="w-full" />
+                                <div className="flex mt-[20px] ml-[20px]">
+                                    <div className="flex justify-center items-center flex-col">
+                                    <img className="w-[40%]" src="/Images/download.jpg" alt="" />
+                                    <h3 className="text-[12px] font-bold my-[5px] text-center">Goggle Chrome</h3>
+                                    <p className="text-gray-400 text-[12px] text-center">54% User</p> 
+                                    </div>
+                                    <div className="flex justify-center items-center flex-col">
+                                    <img className="w-[35%]" src="/Images/download (1).jpg" alt="" />
+                                    <h3 className="text-[12px] font-bold my-[5px] text-center">Firefox</h3>
+                                    <p className="text-gray-400 text-[12px] text-center">23% User</p> 
+                                    </div>
+                                </div>
+                                <div className="flex mt-[20px] ml-[20px]">
+                                    <div className="flex justify-center items-center flex-col">
+                                    <img className="w-[25%]" src="/Images/download (2).jpg" alt="" />
+                                    <h3 className="text-[12px] font-bold my-[5px] text-center">Goggle Chrome</h3>
+                                    <p className="text-gray-400 text-[12px] text-center">54% User</p> 
+                                    </div>
+                                    <div className="flex justify-center items-center flex-col">
+                                    <img className="w-[25%]" src="/Images/download (3).jpg" alt="" />
+                                    <h3 className="text-[12px] font-bold my-[5px] text-center">Google Chrome</h3>
+                                    <p className="text-gray-400 text-[12px] text-center">23% User</p> 
+                                    </div>
+                                </div>
+                                <div className="flex mt-[20px] ml-[20px]">
+                                    <div className="flex justify-center items-center flex-col">
+                                    <img className="w-[40%]" src="/Images/download.jpg" alt="" />
+                                    <h3 className="text-[12px] font-bold my-[5px] text-center">Goggle Chrome</h3>
+                                    <p className="text-gray-400 text-[12px] text-center">54% User</p> 
+                                    </div>
+                                    <div className="flex justify-center items-center flex-col">
+                                    <img className="w-[40%]" src="/Images/download.jpg" alt="" />
+                                    <h3 className="text-[12px] font-bold my-[5px] text-center">Google Chrome</h3>
+                                    <p className="text-gray-400 text-[12px] text-center">23% User</p> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="border-2 border border-dotted py-[10px] border-blue-400 w-[70%] mr-[20px]">
+                                <div className="flex justify-between">
+                                    <h2 className="mb-[5px] flex text-[15px] pl-[10px]">User Location</h2>
+                                    <button className="border px-[10px] py-[5px] text-[13px] rounded-md mb-[5px] mr-[10px]">This Month</button>
+                                </div>
+                                <hr className="w-full" />
+                                <img className="w-[96%] mt-[10px]" src="/Images/map.png" alt="" />
+                                <div className="pl-[20px] grid grid-cols-3 gap-4 place-items-center mt-[45px]">
+                                    <div>
+                                        <img className="w-[30%]" src="/Images/us.png" alt="" />
+                                        <h3 className="text-[12px] mt-[10px]">United State (USA)</h3>
+                                        <p className="text-[12px] text-gray-300">54% 567,268 Users</p>
+                                    </div>
+                                    <div>
+                                        <img className="w-[35%]" src="/Images/images.jpg" alt="" />
+                                        <h3 className="text-[12px] mt-[15px]">China</h3>
+                                        <p className="text-[12px] text-gray-300">3% 808,723 Users</p>
+                                    </div>
+                                    <div>
+                                        <img className="w-[40%]" src="/Images/images (1).jpg" alt="" />
+                                        <h3 className="text-[12px]">Russia</h3>
+                                        <p className="text-[12px] text-gray-300">19% 68,412 Users</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="border-2 border border-dotted py-[10px] border-blue-400 w-[50%] mr-[20px]">
+                                <div className="flex justify-between">
+                                    <h2 className="mb-[5px] flex text-[15px] pl-[10px]">Device Overview</h2>
+                                    <button className="border px-[10px] py-[5px] text-[13px] rounded-md mb-[5px] mr-[10px]">This Month</button>
+                                </div>
+                                <hr className="w-full" />
+                                <div className="flex pl-[20px] pt-[10px]">
+                                    <img className="w-[30%] pr-[20px] object-contain" src="/Images/lp.png" alt="" />
+                                    <div className="text-[13px]">
+                                        <h3 className="font-bold">Computer</h3>
+                                        <p className="text-gray-300">54% - 547,657 Users</p>
+                                        <p className="text-green-300">1.2 Increase</p>
+                                    </div>
+                                </div>
+                                <div className="flex pl-[20px] pt-[20px]">
+                                    <img className="w-[30%] pr-[20px] object-contain" src="/Images/lp.png" alt="" />
+                                    <div className="text-[13px]">
+                                        <h3 className="font-bold">Laptop</h3>
+                                        <p className="text-gray-300">54% - 547,657 Users</p>
+                                        <p className="text-red-300">2.1 Increase</p>
+                                    </div>
+                                </div>
+                                <div className="flex pl-[20px] pt-[20px]">
+                                    <img className="w-[30%] pr-[20px] object-contain" src="/Images/lp.png" alt="" />
+                                    <div className="text-[13px]">
+                                        <h3 className="font-bold">Tablet</h3>
+                                        <p className="text-gray-300">54% - 547,657 Users</p>
+                                        <p className="text-green-300">1.2 Increase</p>
+                                    </div>
+                                </div>
+                                <div className="flex pl-[20px] pt-[20px]">
+                                    <img className="w-[30%] pr-[20px] object-contain" src="/Images/lp.png" alt="" />
+                                    <div className="text-[13px]">
+                                        <h3 className="font-bold">Mobile Phone</h3>
+                                        <p className="text-gray-300">54% - 547,657 Users</p>
+                                        <p className="text-green-300">1.2 Increase</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
