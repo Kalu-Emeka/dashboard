@@ -1,5 +1,34 @@
-
 import Sidemenu from "../components/sidemenu"
+import {
+    BarChart,
+    Bar,
+    LineChart,
+    Line,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    Legend,
+    ResponsiveContainer,
+  } from "recharts";
+const barChartData = [
+    { name: "Mon", visitors: 3000 },
+    { name: "Tue", visitors: 2000 },
+    { name: "Wed", visitors: 2780 },
+    { name: "Thu", visitors: 1890 },
+    { name: "Fri", visitors: 2390 },
+    { name: "Sat", visitors: 3490 },
+    { name: "Sun", visitors: 4000 },
+];
+  
+const lineChartData = [
+    { date: "Nov 1", users: 2400 },
+    { date: "Nov 5", users: 3200 },
+    { date: "Nov 10", users: 2800 },
+    { date: "Nov 15", users: 3600 },
+    { date: "Nov 20", users: 4000 },
+    { date: "Nov 25", users: 4400 },
+];
 function LandingPage () {
     return (
         <>
@@ -32,34 +61,78 @@ function LandingPage () {
                                 <p className="text-green-500 text-[12px]">6.7% Increase</p>
                             </div>
                             <h2 className="font-bold">157,367</h2>
-                            <img className="w-[90%] mt-[10px]" src="/Images/b1.png" alt="" />
+                            <div className="flex justify-center mt-[10px] mr-[10px]">
+                                <ResponsiveContainer width="130%" height={180}>
+                                    <BarChart data={barChartData}>
+                                    <CartesianGrid strokeDasharray="3 3" />
+                                    <XAxis dataKey="name" />
+                                    <YAxis />
+                                    <Tooltip />
+                                    <Legend />
+                                    <Bar dataKey="visitors" fill="#4F46E5" />
+                                    </BarChart>
+                                </ResponsiveContainer>
+                            </div>
                         </div>
                         <div className="border-2 border border-dotted py-[10px] px-[8px] border-blue-400">
                             <div className="flex">
-                                <h3 className="text-[12px] mr-[20px]">ACTIVE VISITORS</h3>
+                                <h3 className="text-[12px] mr-[20px]">VISITORS FOR MINUTE</h3>
                                 <p className="text-red-500 text-[12px]">13.5% Decrease</p>
                             </div>
                             <h2 className="font-bold">9,741</h2>
-                            <img className="w-[90%] mt-[10px]" src="/Images/b3.png" alt="" />
+                            <div className="flex justify-center mt-[2px] mr-[20px]">
+                                <ResponsiveContainer width="100%" height={200}>
+                                    <LineChart data={lineChartData}>
+                                    <CartesianGrid strokeDasharray="3 3" />
+                                    <XAxis dataKey="date" />
+                                    <YAxis />
+                                    <Tooltip />
+                                    <Legend />
+                                    <Line type="monotone" dataKey="users" stroke="#008000" strokeWidth={6} />
+                                    </LineChart>
+                                </ResponsiveContainer>
+                            </div>
                         </div>
                         <div className="border-2 border border-dotted py-[10px] px-[8px] border-blue-400">
                             <div className="flex">
-                                <h3 className="text-[12px] mr-[20px]">ACTIVE VISITORS</h3>
+                                <h3 className="text-[12px] mr-[20px]">CONVERSION RATE</h3>
                                 <p className="text-green-500 text-[12px]">6.7% Increase</p>
                             </div>
                             <h2 className="font-bold">9.73%</h2>
-                            <img className="w-[90%] mt-[10px]" src="/Images/b4.png" alt="" />
+                            <div className="mt-[10px] mr-[30px]">
+                                <ResponsiveContainer width="110%" height={180}>
+                                    <BarChart data={barChartData}>
+                                    <CartesianGrid strokeDasharray="3 3" />
+                                    <XAxis dataKey="name" />
+                                    <YAxis />
+                                    <Tooltip />
+                                    <Legend />
+                                    <Bar dataKey="visitors" fill="#C0A000" />
+                                    </BarChart>
+                                </ResponsiveContainer>
+                            </div>
                         </div>
                         <div className="border-2 border border-dotted py-[10px] px-[8px] border-blue-400">
                             <div className="flex">
-                                <h3 className="text-[12px] mr-[20px]">ACTIVE VISITORS</h3>
+                                <h3 className="text-[12px] mr-[20px]">BOUNCE RATE</h3>
                                 <p className="text-green-500 text-[12px]">3.5% Increase</p>
                             </div>
                             <h2 className="font-bold">81.94%</h2>
-                            <img className="w-[90%] mt-[10px]" src="/Images/b2.png" alt="" />
+                            <div className="mt-[5px] mr-[20px]">
+                                <ResponsiveContainer width="100%" height={200}>
+                                    <LineChart data={lineChartData}>
+                                    <CartesianGrid strokeDasharray="3 3" />
+                                    <XAxis dataKey="date" />
+                                    <YAxis />
+                                    <Tooltip />
+                                    <Legend />
+                                    <Line type="monotone" dataKey="users" stroke="#008000" strokeWidth={6} />
+                                    </LineChart>
+                                </ResponsiveContainer>
+                            </div>
                         </div>
                     </div>
-                    <div className="absolute left-[20%] top-[330px] w-[79%]">
+                    <div className="absolute left-[20%] top-[420px] w-[79%]">
                         <div className="flex justify-between">
                             <div className="border-2 border border-dotted py-[10px] border-blue-400 w-[70%] mr-[20px]">
                                 <div className="flex justify-between">
@@ -67,7 +140,18 @@ function LandingPage () {
                                     <button className="border px-[10px] py-[5px] text-[13px] rounded-md mb-[5px] mr-[10px]">This Month</button>
                                 </div>
                                 <hr className="w-full" />
-                                <img className="w-[80%] mt-[10px]" src="/Images/b2.png" alt="" />
+                                <div className="mt-[30px] mr-[20px]">
+                                    <ResponsiveContainer width="100%" height={250}>
+                                        <LineChart data={lineChartData}>
+                                        <CartesianGrid strokeDasharray="3 3" />
+                                        <XAxis dataKey="date" />
+                                        <YAxis />
+                                        <Tooltip />
+                                        <Legend />
+                                        <Line type="monotone" dataKey="users" stroke="#007bff" strokeWidth={6} />
+                                        </LineChart>
+                                    </ResponsiveContainer>
+                                </div>
                             </div>
                             <div  className="border-2 border border-dotted py-[10px] border-blue-400 w-[30%]">
                                 <div className="flex justify-between mb-[5px] px-[5px]">
@@ -120,7 +204,7 @@ function LandingPage () {
                             </div>
                         </div>
                     </div>
-                    <div className="absolute left-[20%] top-[700px] w-[80%]">
+                    <div className="absolute left-[20%] top-[780px] w-[80%]">
                         <div className="flex justify-center">
                             <div className="border-2 border border-dotted py-[10px] border-blue-400 w-[50%] mr-[20px]">
                                 <div className="flex justify-between">
